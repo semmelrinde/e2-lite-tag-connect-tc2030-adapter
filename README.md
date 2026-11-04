@@ -48,9 +48,9 @@ E2 Lite ── 20-pin 1.27 mm ribbon cable ── J1 [adapter] J2 ── TC2030-
 
 | Ref | Qty | Part | Notes |
 |---|---|---|---|
-| J1 | 1 | 2×10 box header, 1.27 mm pitch, straight, through-hole ("DC3-20P 1.27 mm") | notch towards the board edge (odd-pin side), as on the silkscreen |
-| J2 | 1 | 2×3 box header, 2.54 mm pitch, straight, through-hole ("DC3-6P") | notch towards the middle of the board (odd-pin side), as on the silkscreen |
-| U1 | 1 | TI LM66100DCKR, SC-70-6 | footprint has extended pads for hand soldering |
+| J1 | 1 | 2×10 box header, 1.27 mm pitch, straight, through-hole, e.g. Samtec SHF-110-01-L-D-TH or a generic "DC3-20P 1.27 mm" | notch towards the board edge (odd-pin side), as on the silkscreen |
+| J2 | 1 | 2×3 box header, 2.54 mm pitch, straight, through-hole, e.g. Würth 61200621621 or a generic "DC3-6P" | notch towards the middle of the board (odd-pin side), as on the silkscreen |
+| U1 | 1 | TI LM66100DCKR (or the automotive LM66100QDCKRQ1, same pinout), SC-70-6 | footprint has extended pads for hand soldering |
 | R1, R2, R3 | 3 | 100 Ω, 0603 | |
 | C1, C2 | 2 | 100 nF, 0603, X7R | |
 | C3 | 1 | 1 µF, 0603 | 470 nF … 2.2 µF also fine |
@@ -60,7 +60,17 @@ You also need:
 - a **Tag-Connect TC2030-IDC** (with legs) or **TC2030-IDC-NL** (no legs) cable from [Tag-Connect](https://www.tag-connect.com/product/tc2030-idc-6-pin-tag-connect-plug-of-nails-spring-pin-cable-with-legs).
 - a **Renesas E2 emulator Lite** (RTE0T0002LKCE00000R), for example from DigiKey or Mouser.
 
-### Where to get the small parts (AliExpress, checked November 2026)
+### Where to get the small parts
+
+**If you buy the E2 Lite from DigiKey anyway, get the small parts there too.** They add only a few francs, the order stays above the free-shipping threshold, and you get genuine parts. Prices and stock checked at DigiKey Switzerland on 4 November 2026 (without VAT, will change):
+
+| Ref | Part number | Price | Notes |
+|---|---|---|---|
+| J1 | Samtec SHF-110-01-L-D-TH | CHF 2.25 | 19 mm long, about 0.4 mm longer than the outline on the board at the outer edge; harmless. Pins 0.41 mm square in 0.65 mm holes: a snug fit. |
+| J2 | Würth 61200621621 | CHF 0.41 | |
+| U1 | TI LM66100QDCKRQ1 (cut tape) | CHF 0.31 | LM66100DCKR was out of stock; the Q1 part is the automotive grade of the same chip |
+
+#### AliExpress (checked November 2026)
 
 Listings change, so every part also has a description and search words. The links are examples, not recommendations of a particular seller. Check the variant (pitch and pin count) before you pay.
 
@@ -72,7 +82,7 @@ Listings change, so every part also has a description and search words. The link
 | 20-pin 1.27 mm cable (alternative to the Renesas cable) | [item 1005006165132728](https://de.aliexpress.com/item/1005006165132728.html) | **pitch 1.27 mm**, 20P, same direction | `1.27mm IDC flat cable 20 pin 2x10 same direction` |
 | 0603 resistor and capacitor kits | any 0603 kit with 100 Ω, 100 nF and 1 µF | | `0603 resistor kit`, `0603 capacitor kit 1pF-10uF` |
 
-Shipping tip: Choice items ship free once the Choice part of your order reaches the free-shipping threshold (CHF 9 in Switzerland, November 2026). If you order other Choice items anyway (for example a resistor kit), a second 10-pack of 6P headers can cost less than the shipping you save.
+Shipping tip: on AliExpress every seller charges its own shipping, often more than the part itself. Choice items ship free once the Choice part of your order reaches the threshold (CHF 9 in Switzerland, November 2026).
 
 Watch out: many "1.27 mm" ribbon cables have 2.54 mm plugs (the ribbon wires have a 1.27 mm pitch). For the E2 Lite you need **plugs with 1.27 mm pin pitch** (ribbon wire pitch 0.635 mm).
 
@@ -149,7 +159,7 @@ Custom footprints: `BoxHeader_2x10_P1.27mm_Vertical_DC3` (pins as KiCad `PinHead
 
 - Hardware design, documentation and scripts: **CERN-OHL-P-2.0** ([LICENSE](LICENSE)). You may use, modify, make and sell it. The design comes without any warranty, see the licence.
 - Footprints and 3D models taken from the KiCad libraries: CC-BY-SA 4.0 with the KiCad library exception, see [NOTICE.md](NOTICE.md).
-- **Not affiliated with or endorsed by** Renesas Electronics, Tag-Connect LLC, Texas Instruments or any other manufacturer. Product names and trademarks belong to their owners and are used only to describe compatibility. No manufacturer datasheets, manual text or seller photos are included; please get them from the original sources.
+- **Not affiliated with or endorsed by** Renesas Electronics, Tag-Connect LLC, Texas Instruments, Samtec, Würth Elektronik, DigiKey, AliExpress or any other manufacturer or shop. Product names and trademarks belong to their owners and are used only to describe compatibility. No manufacturer datasheets, manual text or seller photos are included; please get them from the original sources.
 - You use this adapter at your own risk. Check pinouts against your own board and debugger before connecting anything.
 
 ---
@@ -160,6 +170,6 @@ Kleiner Adapter zum Selberlöten: **Renesas E2 emulator Lite** (20-polig, 1,27 m
 
 - **Belegung:** wie in der Tabelle oben. Pin 9 (UCON) liegt auf Masse.
 - **Schutz:** Die Idealdiode LM66100 schützt nur bei ausgeschaltetem Zielboard vor den 3,3 V des Emulators. Darum im Programm immer „Power Target From The Emulator: No“ einstellen.
-- **Teile:** zwei Wannenstecker (1,27 mm 2×10 und 2,54 mm 2×3), LM66100, drei 100-Ω-Widerstände, zwei 100-nF- und ein 1-µF-Kondensator, alle 0603. Links und Suchbegriffe stehen in der Tabelle.
+- **Teile:** zwei Wannenstecker (1,27 mm 2×10 und 2,54 mm 2×3), LM66100, drei 100-Ω-Widerstände, zwei 100-nF- und ein 1-µF-Kondensator, alle 0603. Links und Suchbegriffe stehen in der Tabelle. Wer den E2 Lite bei DigiKey kauft, nimmt die Kleinteile dort mit (Samtec SHF-110-01-L-D-TH, Würth 61200621621, LM66100QDCKRQ1): kein eigener Versand, Originalteile.
 - **Sparen:** Die Platine zu einer Leiterplattenbestellung dazulegen, die du sowieso hast. Dann fällt der eigene Versand weg, bei JLCPCB am 4.11.2026 etwa €21.
 - Lizenz: CERN-OHL-P-2.0. Ohne Gewähr. Keine Verbindung zu Renesas oder Tag-Connect.
