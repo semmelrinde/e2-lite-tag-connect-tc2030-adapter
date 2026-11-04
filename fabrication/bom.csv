@@ -1,0 +1,7 @@
+Reference,Qty,Value,Package,Description,Example part
+J1,1,2x10 box header 1.27 mm,THT straight,E2 Lite 20-pin connector (notch on odd-pin side),DC3-20P 1.27 mm box header
+J2,1,2x3 box header 2.54 mm,THT straight,TC2030-IDC connector (notch on odd-pin side),DC3-6P 2.54 mm box header
+U1,1,LM66100DCKR,SC-70-6,Ideal diode (CE=VOUT, ST=GND),Texas Instruments LM66100DCKR
+R1 R2 R3,3,100 Ohm,0603,Series resistors SWDIO/SWCLK/RES#,any 0603 1% or 5%
+C1 C2,2,100 nF,0603,Decoupling,X7R 16 V or more
+C3,1,1 uF,0603,Decoupling E2 Lite I/O supply,X5R/X7R 10 V or more

@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "E2L_TC") (type "KiCad") (uri "${KIPRJMOD}/lib/E2L_TC.pretty") (options "") (descr "Adapter E2 Lite -> TC2030"))
+)
