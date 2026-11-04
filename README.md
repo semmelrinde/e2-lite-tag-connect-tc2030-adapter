@@ -66,10 +66,13 @@ Listings change, so every part also has a description and search words. The link
 
 | Part | Example listing | Choose this variant | Search words if the link is dead |
 |---|---|---|---|
-| J1 and J2 box headers | [item 1005006195593825](https://de.aliexpress.com/item/1005006195593825.html) | **1.27 mm, 20P** and **2.54 mm, 6P**, straight (DIP) | `1.27mm box header 2x10 DC3 straight DIP`, `2.54mm box header 2x3 6P straight` |
+| J1 box header, 1.27 mm 2×10 | [item 1005006195593825](https://de.aliexpress.com/item/1005006195593825.html) | **1.27 mm, 20P**, straight (DIP) | `1.27mm box header 2x10 DC3 straight DIP` |
+| J2 box header, 2.54 mm 2×3 | [item 1005007258589531](https://de.aliexpress.com/item/1005007258589531.html) (AliExpress Choice) or [item 1005006195593825](https://de.aliexpress.com/item/1005006195593825.html) | **6Pin** (10 pcs), straight (DIP) | `2.54mm box header 2x3 6P straight DC3` |
 | U1 LM66100DCKR | [item 1005013241477993](https://de.aliexpress.com/item/1005013241477993.html) | 10 pcs, SC-70-6 | `LM66100DCKR SC70-6` |
 | 20-pin 1.27 mm cable (alternative to the Renesas cable) | [item 1005006165132728](https://de.aliexpress.com/item/1005006165132728.html) | **pitch 1.27 mm**, 20P, same direction | `1.27mm IDC flat cable 20 pin 2x10 same direction` |
 | 0603 resistor and capacitor kits | any 0603 kit with 100 Ω, 100 nF and 1 µF | | `0603 resistor kit`, `0603 capacitor kit 1pF-10uF` |
+
+Shipping tip: Choice items ship free once the Choice part of your order reaches the free-shipping threshold (CHF 9 in Switzerland, November 2026). If you order other Choice items anyway (for example a resistor kit), a second 10-pack of 6P headers can cost less than the shipping you save.
 
 Watch out: many "1.27 mm" ribbon cables have 2.54 mm plugs (the ribbon wires have a 1.27 mm pitch). For the E2 Lite you need **plugs with 1.27 mm pin pitch** (ribbon wire pitch 0.635 mm).
 
